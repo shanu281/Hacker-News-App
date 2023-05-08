@@ -5,30 +5,21 @@ import Loader from "../Loader";
 
 const NewsLists = () => {
   const { news } = useContext(NewsContext);
-  console.log(news)
+  console.log(news);
   return (
     <section>
       <div>
-        {
-            news === undefined  ?  
-                 
+        {news === undefined ? (
+          <div className="w-full h-[600px] flex justify-center items-center">
             <Loader />
-                 :
-                (
-                   <div>
-                    {
-                        news.hits.map((item, index) => {
-                            return (
-                                <NewsList news={item} />
-                            )
-                        }
-                        )
-
-                    }
-                   </div>
-                    )
-        }
-        
+          </div>
+        ) : (
+          <div>
+            {news.hits.map((item, index) => {
+              return <div key={item.id}> <NewsList news={item} index={index} /></div>;
+            })}
+          </div>
+        )}
       </div>
     </section>
   );

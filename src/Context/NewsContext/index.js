@@ -3,6 +3,8 @@ import React, { createContext, useEffect, useState } from 'react'
 // Create context
 export const NewsContext = createContext();
 
+
+
 // Provider
 const NewsProvider = ({children}) => {
     const [news, setNews] = useState()

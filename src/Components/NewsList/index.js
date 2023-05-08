@@ -1,6 +1,12 @@
 import React from "react";
 
-const NewsList = (news) => {
+const NewsList = (news, index) => {
+ 
+   const handleClick =(id) => {
+console.log(id)
+    }
+
+    console.log(news.news.objectID)
   return (
     <div className="shadow-2xl ">
       <div className=" px-8 py-3   border-b-4 mb-5 ">
@@ -16,9 +22,10 @@ const NewsList = (news) => {
             </span>
           </div>
         </div>
-        <h1 className="text-xl  font-semibold cursor-pointer ">
+        <h1 onClick={() => handleClick(news.news.objectID)} className="text-xl  font-semibold cursor-pointer ">
           {news.news.title}
         </h1>
+        
         <a href={news.news.url} className="text-blue-500 hover:underline ">
           {news.news.url}
         </a>

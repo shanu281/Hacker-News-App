@@ -5,8 +5,8 @@ import NewsLists from "../../Components/NewsLists";
 const Home = () => {
   
   return (
-    <section className=" container h-[750px] mx-auto shadow-2xl">
-      <div className=" mx-auto flex flex-col items-center gap-x-2">
+    <section className=" container  mx-auto shadow-2xl">
+      <div className=" mx-auto flex flex-col items-center gap-x-2 mt-4">
         <input
           type="search"
           placeholder="Search news..."

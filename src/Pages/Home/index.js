@@ -1,11 +1,9 @@
 import React, {useContext, useEffect} from "react";
 import { BsSearch } from "react-icons/bs";
-import NewsList from "../../Components/NewsList";
-import { NewsContext } from "../../Context/NewsContext";
+import NewsLists from "../../Components/NewsLists";
 
 const Home = () => {
-  const {news} = useContext(NewsContext)
-  console.log(news)
+  
   return (
     <section className=" container h-[750px] mx-auto shadow-2xl">
       <div className=" mx-auto flex flex-col items-center gap-x-2">
@@ -24,7 +22,7 @@ const Home = () => {
           </button>
         </div>
       </div>
-      <NewsList />
+      <NewsLists />
     </section>
   );
 };

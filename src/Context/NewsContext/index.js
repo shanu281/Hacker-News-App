@@ -6,6 +6,7 @@ export const NewsContext = createContext();
 // Provider
 const NewsProvider = ({children}) => {
     const [news, setNews] = useState()
+    const [searchInput, setSearchInput] = useState("Ethical hacking")
 
     // Fetch News 
     useEffect(() => {
@@ -13,7 +14,7 @@ const NewsProvider = ({children}) => {
         .then((res) => res.json())
         .then((data) => setNews(data))
     },[])
-    console.log(news)
+   
   return (
     <NewsContext.Provider 
     value={{news, setNews }}

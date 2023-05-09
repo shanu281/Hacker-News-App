@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NewsList = (news, index) => {
  
    const handleClick =(id) => {
-console.log(id)
+// console.log(id)
     }
 
     console.log(news.news.objectID)
   return (
-    <div className="shadow-2xl ">
+    <div className="shadow-2xl w-5/6 mx-auto">
       <div className=" px-8 py-3   border-b-4 mb-5 ">
         <div className="flex justify-between px-5  items-center  mx-auto">
           <div>
@@ -22,9 +23,11 @@ console.log(id)
             </span>
           </div>
         </div>
+        <Link to={`news/${news.news.objectID}`}>
         <h1 onClick={() => handleClick(news.news.objectID)} className="text-xl  font-semibold cursor-pointer ">
           {news.news.title}
         </h1>
+        </Link>
         
         <a href={news.news.url} className="text-blue-500 hover:underline ">
           {news.news.url}

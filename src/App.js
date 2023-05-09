@@ -3,7 +3,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Home from "./Pages/Home";
 import {createBrowserRouter, RouterProvider } from "react-router-dom";
-import NewsDetails from "./Pages/PageDetails";
+import NewsDetails from "./Pages/NewsDetails";
 
 const router = createBrowserRouter([
   {

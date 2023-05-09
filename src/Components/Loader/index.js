@@ -3,12 +3,12 @@ import './style.css'
 const Loader = () => {
   return (
     <div>
-        <div class="spinner">
-<div class="dot"></div>
-<div class="dot"></div>
-<div class="dot"></div>
-<div class="dot"></div>
-<div class="dot"></div></div>
+        <div className="spinner">
+<div className="dot"></div>
+<div className="dot"></div>
+<div className="dot"></div>
+<div className="dot"></div>
+<div className="dot"></div></div>
     </div>
   )
 }

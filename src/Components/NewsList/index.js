@@ -1,13 +1,15 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-const NewsList = (news, index) => {
- 
+
+const NewsList = (news) => {
+  
    const handleClick =(id) => {
-// console.log(id)
+console.log("handleclick", id)
     }
 
-    console.log(news.news.objectID)
+
   return (
     <div className="shadow-2xl w-5/6 mx-auto">
       <div className=" px-8 py-3   border-b-4 mb-5 ">

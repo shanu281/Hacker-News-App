@@ -4,15 +4,18 @@ import { useParams } from "react-router-dom";
 import { GoCommentDiscussion } from "react-icons/go";
 import { BiLike } from "react-icons/bi";
 import { FcLike } from "react-icons/fc";
+import Home from "../Home";
 const NewsDetails = () => {
   const { news } = useContext(NewsContext);
   const { id } = useParams();
+  const {searchInput} = useParams()
 
   //Destructure news
   // const {title, description, author, url, urlToImage} = news;
 
-  console.log(news.hits);
+  
   console.log(id);
+  console.log(searchInput);
   //
   const newNews = news.hits.filter((e) => {
     return e.objectID === id;
@@ -30,11 +33,11 @@ const NewsDetails = () => {
         </h1>
       </div>
       {/* Hero section  */}
-      <div className=" flex  justify-around">
+      <div className=" flex  justify-around lg:flex-row sm:flex-col">
        
-        <div className=" flex flex-col   w-2/3   ">
+        <div className=" flex flex-col   w-2/3  sm:w-full  ">
           {/* Image  */}
-          <div className=" h-[450px] w-[700px] mx-auto  shadow-2xl mb-4 ">
+          <div className=" h-[450px] w-[700px] mx-auto  shadow-2xl mb-4 sm:h-[300px] sm:w-[400px] sm:mx-auto ">
             <img
               className="h-full w-full overflow-hidden"
               src="/news-img.png"
@@ -68,7 +71,7 @@ const NewsDetails = () => {
             </p>
           </div>
           <div className="w-1/3 mx-auto">
-          <button className="btn bg-teal-800 text-white btn-primary  hover:bg-teal-600 hover:text-white transition duration-700 py-3 font-bold text-xl w-full shadow-2xl">
+          <button className="btn bg-teal-800 text-white btn-primary  hover:bg-teal-600 hover:text-white transition duration-700 py-3 font-bold text-xl w-full shadow-2xl mb-5">
             Read More
           </button>
         </div>
@@ -76,7 +79,7 @@ const NewsDetails = () => {
 
         {/* Details  */}
         <div>
-          <div className=" flex flex-col justify-around items-center w-[350px]">
+          <div className=" flex flex-col justify-around items-center w-[350px] sm:mx-auto">
             <div className="flex-1 bg-white  mb-8 border border-gray-300 rounded-lg px-6 py-8 w-full shadow-2xl ">
               <div className=" p-1  items-center   ">
                 <div className="border-b-4 text-2xl mb-2">

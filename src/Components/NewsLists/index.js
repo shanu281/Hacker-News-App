@@ -5,7 +5,8 @@ import Loader from "../Loader";
 
 const NewsLists = () => {
   const { news } = useContext(NewsContext);
-  console.log(news);
+  
+  
   return (
     <section>
       <div >
@@ -16,7 +17,7 @@ const NewsLists = () => {
         ) : (
           <div>
             {news.hits.map((item, index) => {
-              return <div key={item.id}> <NewsList news={item} index={index} /></div>;
+              return <div key={item.objectID}> <NewsList news={item} index={index}  /></div>;
             })}
           </div>
         )}

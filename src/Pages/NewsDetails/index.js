@@ -22,7 +22,7 @@ const NewsDetails = () => {
   console.log(newNews[0].title);
 
   return (
-    <section className="container  mx-auto shadow-2xl">
+    <section className="container  mx-auto shadow-2xl mt-[125px]">
       {/* Header  */}
       <div className="mb-2">
         <h1 className="text-6xl z-20 font-primary text-center">

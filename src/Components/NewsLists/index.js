@@ -8,7 +8,7 @@ const NewsLists = () => {
   console.log(news);
   return (
     <section>
-      <div>
+      <div >
         {news === undefined ? (
           <div className="w-full h-[600px] flex justify-center items-center">
             <Loader />
